@@ -5,14 +5,18 @@ import heartemoji from '../../img/heartemoji.png'
 import glasses from '../../img/glasses.png'
 import humble from '../../img/humble.png'
 import resume from './Resume.pdf'
+import { themeContext } from '../../Context'
+import { useContext } from 'react'
 
 
 export const Services = () => {
+  const theme = useContext(themeContext)
+  const darkMood = theme.state.darkMood
   return (
     <div className="services">
       {/* For left side */}
       <div className="awesome">
-        <span>My Awesome</span>
+        <span style={{color:darkMood? 'white':''}}>My Awesome</span>
         <span>Services</span>
         <span>
           Software Developer with aptitude, problem

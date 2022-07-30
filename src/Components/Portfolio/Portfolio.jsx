@@ -6,12 +6,16 @@ import portfolio from '../../img/portfolio.png'
 import cleanly from '../../img/cleanapp.png'
 import pan3react from '../../img/pan3react.png'
 import pan3 from '../../img/pan3.png'
+import { themeContext } from '../../Context'
+import { useContext } from 'react'
 
 export const Portfolio = () => {
+    const theme = useContext(themeContext)
+    const darkMood = theme.state.darkMood
     return (
         <div className="portfolio">
             {/* Heading */}
-            <span>Recent Projects</span>
+            <span style={{color:darkMood? 'white':''}}>Recent Projects</span>
             <span>Portfolio</span>
 
             {/* Slider */}
