@@ -10,6 +10,15 @@ import crown from '../../img/crown.png'
 import thumbup from '../../img/thumbup.png'
 import glassesimoji from '../../img/glassesimoji.png'
 import { FloatingDiv } from '../FloatingDiv/FloatingDiv'
+const handleFacebook = () => {
+  window.open('https://www.instagram.com/amitkumardebnath143/', '_blank');
+}
+const handleLinkin = () => {
+  window.open('https://in.linkedin.com/in/amit-kumar-debnath-496072221?trk=people-guest_people_search-card', '_blank');
+}
+const handlegithub = () => {
+  window.open('https://github.com/debamit143', '_blank');
+}
 
 export const Intro = () => {
   return (
@@ -22,9 +31,9 @@ export const Intro = () => {
         </div>
         <button className="button i-button"> Hire Me</button>
         <div className="i-icons">
-          <img src={github} alt='' />
-          <img src={linkedin} alt='' />
-          <img src={insta} alt='' />
+          <img src={github} alt='' onClick={handlegithub} />
+          <img src={linkedin} alt='' onClick={handleLinkin}/>
+          <img src={insta} alt='' onClick={handleFacebook}/>
         </div>
       </div>
       <div className="i-right">
