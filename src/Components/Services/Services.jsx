@@ -15,7 +15,7 @@ export const Services = () => {
   const theme = useContext(themeContext)
   const darkMood = theme.state.darkMood
   return (
-    <div className="services">
+    <div className="services" id = "services">
       {/* For left side */}
       <div className="awesome">
         <span style={{color:darkMood? 'white':''}}>My Awesome</span>

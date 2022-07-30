@@ -8,7 +8,7 @@ export const Contact = () => {
     const darkMood = theme.state.darkMood
 
     return (
-        <div className="contact-form">
+        <div className="contact-form" id = 'contact'>
             <div className="w-left">
                 <div className="awesome">
                     <span style={{color:darkMood? 'white':''}}>Get In Touch</span>

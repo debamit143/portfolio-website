@@ -13,7 +13,7 @@ export const Portfolio = () => {
     const theme = useContext(themeContext)
     const darkMood = theme.state.darkMood
     return (
-        <div className="portfolio">
+        <div className="portfolio" id="portfolio">
             {/* Heading */}
             <span style={{color:darkMood? 'white':''}}>Recent Projects</span>
             <span>Portfolio</span>
