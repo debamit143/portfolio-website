@@ -12,12 +12,13 @@ import glassesimoji from '../../img/glassesimoji.png'
 import { FloatingDiv } from '../FloatingDiv/FloatingDiv'
 import { themeContext } from '../../Context'
 import { useContext } from 'react'
-
+import { motion } from "framer-motion"
 
 
 
 
 export const Intro = () => {
+  const transition ={duration:2,type:'spring'}
   const handleFacebook = () => {
     window.open('https://www.instagram.com/amitkumardebnath143/', '_blank');
   }
@@ -48,13 +49,30 @@ export const Intro = () => {
         <img src={vector1} alt='' />
         <img src={vector2} alt='' />
         <img src={boy} alt='' />
-        <img src={glassesimoji} alt='' />
-        <div style={{ top: '-4%', left: '68%' }}>
+        <motion.img 
+        initial={{left:'-36%'}}
+        whileInView ={{left:'-20%'}}
+        transition={transition}
+
+        src={glassesimoji} alt='' />
+        <motion.div 
+         initial={{top :'-4%',left:'80%'}}
+         whileInView ={{left:'60%'}}
+         transition={transition}
+
+        
+        style={{ top: '-4%', left: '60%' }}>
           <FloatingDiv image={crown} text1='Web' text2='Developer' />
-        </div>
-        <div style={{ top: '18rem', left: '0.9rem' }}>
+        </motion.div>
+        <motion.div 
+        initial={{top :'18rem',left:'9rem'}}
+        whileInView ={{left:'0.9rem'}}
+        transition={transition}
+        
+        
+        style={{ top: '18rem', left: '0.9rem' }}>
           <FloatingDiv image={thumbup} text1='Best Design' text2='Award' />
-        </div>
+        </motion.div>
         <div className="blur" style={{ background: 'rgb(238 210 255)' }}></div>
         <div className="blur" style={{ background: '#C1F5FF', top: '17rem', width: '21rem', height: '11rem', left: '-9rem' }}></div>
       </div>

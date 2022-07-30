@@ -7,9 +7,11 @@ import humble from '../../img/humble.png'
 import resume from './Resume.pdf'
 import { themeContext } from '../../Context'
 import { useContext } from 'react'
+import { motion } from "framer-motion"
 
 
 export const Services = () => {
+  const transition ={duration:2,type:'spring'}
   const theme = useContext(themeContext)
   const darkMood = theme.state.darkMood
   return (
@@ -39,31 +41,46 @@ export const Services = () => {
       <div className="cards">
 
         {/* 1st div */}
-        <div style={{ left: '14rem' }}>
+        <motion.div 
+        initial={{left:'27rem'}}
+        whileInView ={{left:'16rem'}}
+        transition={transition}
+        
+        style={{ left: '16rem' }}>
           <Card
             emoji={heartemoji}
             heading={'Design'}
             detail={"I love work"}
           />
-        </div>
+        </motion.div>
         {/* 2nd Div*/}
 
-        <div style={{ left: '-4rem', top: '12.5rem' }}>
+        <motion.div 
+        initial={{left:'-10rem'}}
+        whileInView ={{left: '-4rem', top: '12.5rem'}}
+        transition={transition}
+        
+        style={{ left: '-4rem', top: '12.5rem' }}>
           <Card
             emoji={glasses}
             heading={'Developer'}
             detail={"Html JavaScript ReactJs Python Django Django Rest Api Firebase"}
           />
-        </div>
+        </motion.div>
 
         {/* 3rd Div */}
-        <div style={{ left: '12rem', top: '19rem' }}>
+        <motion.div 
+        initial={{left:'27rem'}}
+        whileInView ={{left: '12rem', top: '19rem'}}
+        transition={transition}
+        
+        style={{ left: '12rem', top: '19rem' }}>
           <Card
             emoji={humble}
             heading={'UI/UX'}
             detail={"lorem fhyff dddsdf hhyrbn ggdgr jjhfdf hgfdv hffkgui fjfvmbgk jfjhmb hfjdvbk"}
           />
-        </div>
+        </motion.div>
         <div className="blur s-blur2" style={{ background: 'var(--purple)' }}></div>
       </div>
     </div>
